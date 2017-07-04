@@ -95,7 +95,7 @@ public:
 };
 
 /**
- * PIVX RPC command dispatcher.
+ * Las Vegas Coin RPC command dispatcher.
  */
 class CRPCTable
 {

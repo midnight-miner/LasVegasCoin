@@ -82,7 +82,7 @@ src/qt/test/moc*.cpp
 *.qm
 Makefile
 pivx-qt
-PIVX-Qt.app
+Las Vegas Coin-Qt.app
 
 # Unit-tests
 Makefile.test

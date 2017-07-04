@@ -16,8 +16,8 @@ BITCOIND_USER=${BITCOIND_USER:-pivx}
 BITCOIND_GROUP=${BITCOIND_GROUP:-pivx}
 BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/pivxd}
 
-name="PIVX Core Daemon"
-description="PIVX crypto-currency p2p network daemon"
+name="Las Vegas Coin Core Daemon"
+description="Las Vegas Coin crypto-currency p2p network daemon"
 
 command="/usr/bin/pivxd"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
