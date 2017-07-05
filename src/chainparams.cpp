@@ -102,8 +102,8 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Las Vegas Coin: 1 day
-        nTargetSpacing = 1 * 60;  // Las Vegas Coin: 1 minute
+        nTargetTimespan = 10 * 60; // Las Vegas Coin: 1 day
+        nTargetSpacing = 1 * 69;  // Las Vegas Coin: 1 minute
         nLastPOWBlock = 259200;
         nMaturity = 100;
         nMasternodeCountDrift = 20;
@@ -124,14 +124,15 @@ public:
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CScriptNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 1 * COIN;
+        txNew.vout[0].nValue = 0 * COIN;
         txNew.vout[0].scriptPubKey = CScript() << ParseHex("04c10e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
         genesis.nTime = 1494013644;
-        genesis.nBits = bnProofOfWorkLimit.GetCompact();
+        genesis.nBits = 0x1f00ffff;
+						  
         genesis.nNonce = 123482;
 
         hashGenesisBlock = genesis.GetHash();
