@@ -11,7 +11,7 @@ with each other, with the help of a P2P network to check for double-spending.
 
 Setup
 -----
-Unpack the files into a directory and run pivx-qt.exe.
+Unpack the files into a directory and run lasvegascoin-qt.exe.
 
 Las Vegas Coin Core is the original Las Vegas Coin client and it builds the backbone of the network.
 However, it downloads and stores the entire history of Las Vegas Coin transactions;

@@ -3,17 +3,17 @@ Description=Las Vegas Coin's distributed currency daemon
 After=network.target
 
 [Service]
-User=pivx
-Group=pivx
+User=lasvegascoin
+Group=lasvegascoin
 
 Type=forking
-PIDFile=/var/lib/pivxd/pivxd.pid
+PIDFile=/var/lib/lasvegascoind/lasvegascoind.pid
 
-ExecStart=/usr/bin/pivxd -daemon -pid=/var/lib/pivxd/pivxd.pid \
-          -conf=/etc/pivx/pivx.conf -datadir=/var/lib/pivxd
+ExecStart=/usr/bin/lasvegascoind -daemon -pid=/var/lib/lasvegascoind/lasvegascoind.pid \
+          -conf=/etc/lasvegascoin/lasvegascoin.conf -datadir=/var/lib/lasvegascoind
 
-ExecStop=-/usr/bin/pivx-cli -conf=/etc/pivx/pivx.conf \
-         -datadir=/var/lib/pivxd stop
+ExecStop=-/usr/bin/lasvegascoin-cli -conf=/etc/lasvegascoin/lasvegascoin.conf \
+         -datadir=/var/lib/lasvegascoind stop
 
 Restart=always
 PrivateTmp=true

@@ -10,7 +10,7 @@ Las Vegas Coin is a cutting edge cryptocurrency, with many features not availabl
   technology used to secure the network and provide the above features, each Masternode is secured
   with collateral of 10K PIV
 
-More information at [pivx.org](http://www.pivx.org) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php?topic=1262920)
+More information at [lasvegascoin.org](http://www.lasvegascoin.org) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php?topic=1262920)
 
 ### Coin Specs
 <table>

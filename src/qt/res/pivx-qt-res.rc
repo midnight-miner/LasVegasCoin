@@ -22,10 +22,10 @@ BEGIN
             VALUE "CompanyName",        "Las Vegas Coin"
             VALUE "FileDescription",    "Las Vegas Coin Core (OSS GUI client for Las Vegas Coin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "pivx-qt"
+            VALUE "InternalName",       "lasvegascoin-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "pivx-qt.exe"
+            VALUE "OriginalFilename",   "lasvegascoin-qt.exe"
             VALUE "ProductName",        "Las Vegas Coin Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END

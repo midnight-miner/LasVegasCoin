@@ -3,7 +3,7 @@ Las Vegas Coin Core
 
 Setup
 ---------------------
-[Las Vegas Coin Core](http://pivx.org/wallet) is the original Las Vegas Coin client and it builds the backbone of the network. However, it downloads and stores the entire history of Las Vegas Coin transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[Las Vegas Coin Core](http://lasvegascoin.org/wallet) is the original Las Vegas Coin client and it builds the backbone of the network. However, it downloads and stores the entire history of Las Vegas Coin transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
@@ -13,12 +13,12 @@ The following are some helpful notes on how to run Las Vegas Coin on your native
 
 Unpack the files into a directory and run:
 
-- bin/32/pivx-qt (GUI, 32-bit) or bin/32/pivxd (headless, 32-bit)
-- bin/64/pivx-qt (GUI, 64-bit) or bin/64/pivxd (headless, 64-bit)
+- bin/32/lasvegascoin-qt (GUI, 32-bit) or bin/32/lasvegascoind (headless, 32-bit)
+- bin/64/lasvegascoin-qt (GUI, 64-bit) or bin/64/lasvegascoind (headless, 64-bit)
 
 ### Windows
 
-Unpack the files into a directory, and then run pivx-qt.exe.
+Unpack the files into a directory, and then run lasvegascoin-qt.exe.
 
 ### OSX
 
@@ -28,8 +28,8 @@ Drag LasVegasCoin-Qt to your applications folder, and then run LasVegasCoin-Qt.
 
 * See the documentation at the [Las Vegas Coin Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [Las Vegas Coin Forum](http://forum.pivx.org/).
-* Join one of our Slack groups [Las Vegas Coin Slack Groups](https://pivx.org/slack-logins/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [Las Vegas Coin Forum](http://forum.lasvegascoin.org/).
+* Join one of our Slack groups [Las Vegas Coin Slack Groups](https://lasvegascoin.org/slack-logins/).
 
 Building
 ---------------------
@@ -55,8 +55,8 @@ The Pivx repo's [root README](https://github.com/LasVegasCoin-Project/LasVegasCo
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [Las Vegas Coin](http://forum.pivx.org/) forum.
-* Join the [Las Vegas Coin-Dev](https://pivx-dev.slack.com/) Slack group ([Sign-Up](https://pivx-dev.herokuapp.com/)).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [Las Vegas Coin](http://forum.lasvegascoin.org/) forum.
+* Join the [Las Vegas Coin-Dev](https://lasvegascoin-dev.slack.com/) Slack group ([Sign-Up](https://lasvegascoin-dev.herokuapp.com/)).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

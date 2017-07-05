@@ -1,31 +1,31 @@
 #!/bin/bash
 #
-#  pivxd The Las Vegas Coin core server.
+#  lasvegascoind The Las Vegas Coin core server.
 #
 #
 # chkconfig: 345 80 20
-# description: pivxd
-# processname: pivxd
+# description: lasvegascoind
+# processname: lasvegascoind
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/pivxd, see below
-if [ -f /etc/sysconfig/pivxd ]; then
-        . /etc/sysconfig/pivxd
+# you can override defaults in /etc/sysconfig/lasvegascoind, see below
+if [ -f /etc/sysconfig/lasvegascoind ]; then
+        . /etc/sysconfig/lasvegascoind
 fi
 
 RETVAL=0
 
-prog=pivxd
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/pivxd
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/pivxd}
+prog=lasvegascoind
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/lasvegascoind
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/lasvegascoind}
 
-# pivxd defaults to /usr/bin/pivxd, override with BITCOIND_BIN
-bitcoind=${BITCOIND_BIN-/usr/bin/pivxd}
+# lasvegascoind defaults to /usr/bin/lasvegascoind, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/usr/bin/lasvegascoind}
 
-# pivxd opts default to -disablewallet, override with BITCOIND_OPTS
+# lasvegascoind opts default to -disablewallet, override with BITCOIND_OPTS
 bitcoind_opts=${BITCOIND_OPTS}
 
 start() {
