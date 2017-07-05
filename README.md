@@ -1,7 +1,7 @@
 Las Vegas Coin Core integration/staging repository
 =====================================
 
-[![Build Status](https://travis-ci.org/Las Vegas Coin-Project/Las Vegas Coin.svg?branch=master)](https://travis-ci.org/Las Vegas Coin-Project/Las Vegas Coin) [![GitHub version](https://badge.fury.io/gh/Las Vegas Coin-Project%2FLas Vegas Coin.svg)](https://badge.fury.io/gh/Las Vegas Coin-Project%2FLas Vegas Coin)
+[![Build Status](https://travis-ci.org/LasVegasCoin-Project/LasVegasCoin.svg?branch=master)](https://travis-ci.org/LasVegasCoin-Project/LasVegasCoin) [![GitHub version](https://badge.fury.io/gh/LasVegasCoin-Project%2FLas Vegas Coin.svg)](https://badge.fury.io/gh/LasVegasCoin-Project%2FLas Vegas Coin)
 
 Las Vegas Coin is a cutting edge cryptocurrency, with many features not available in most other cryptocurrencies.
 - Anonymized transactions using coin mixing technology, we call it _Obfuscation_.
@@ -22,7 +22,7 @@ More information at [pivx.org](http://www.pivx.org) Visit our ANN thread at [Bit
 <tr><td>Premine</td><td>60,000 PIV*</td></tr>
 </table>
 
-*60,000 PIV Premine was burned in block [279917](http://www.presstab.pw/phpexplorer/Las Vegas Coin/block.php?blockhash=206d9cfe859798a0b0898ab00d7300be94de0f5469bb446cecb41c3e173a57e0)
+*60,000 PIV Premine was burned in block [279917](http://www.presstab.pw/phpexplorer/LasVegasCoin/block.php?blockhash=206d9cfe859798a0b0898ab00d7300be94de0f5469bb446cecb41c3e173a57e0)
 
 ### Reward Distribution
 

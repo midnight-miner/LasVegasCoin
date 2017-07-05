@@ -1,7 +1,7 @@
 <!--- Remove this description and sections that do not apply -->
 
 This issue tracker is only for technical issues related to Las Vegas Coin Core.
-General Las Vegas Coin questions and/or support requests and are best directed to the [Las Vegas Coin Slack](http://pivx.slack.com).
+General Las Vegas Coin questions and/or support requests and are best directed to the [Las Vegas Coin Slack](http://lasvegascoin.slack.com).
 
 ### Describe the issue
 

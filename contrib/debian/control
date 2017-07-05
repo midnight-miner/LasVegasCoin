@@ -23,8 +23,8 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 3.9.2
 Homepage: http://www.pivx.org
-Vcs-Git: git://github.com/Las Vegas Coin-Project/Las Vegas Coin.git
-Vcs-Browser: http://github.com/Las Vegas Coin-Project/Las Vegas Coin
+Vcs-Git: git://github.com/LasVegasCoin-Project/LasVegasCoin.git
+Vcs-Browser: http://github.com/LasVegasCoin-Project/LasVegasCoin
 
 Package: pivxd
 Architecture: any

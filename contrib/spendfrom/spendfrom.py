@@ -35,9 +35,9 @@ def check_json_precision():
 def determine_db_dir():
     """Return the default location of the pivx data directory"""
     if platform.system() == "Darwin":
-        return os.path.expanduser("~/Library/Application Support/Las Vegas Coin/")
+        return os.path.expanduser("~/Library/Application Support/LasVegasCoin/")
     elif platform.system() == "Windows":
-        return os.path.join(os.environ['APPDATA'], "Las Vegas Coin")
+        return os.path.join(os.environ['APPDATA'], "LasVegasCoin")
     return os.path.expanduser("~/.pivx")
 
 def read_bitcoin_config(dbdir):

@@ -25,7 +25,7 @@ mnbudget prepare cool-project http://www.cool-project/one.json 12 100000 y6R9oN1
 
 Output: `464a0eb70ea91c94295214df48c47baa72b3876cfb658744aaf863c7b5bf1ff0` - This is the collateral hash, copy this output for the next step
 
-In this transaction we prepare collateral for "_cool-project_". This proposal will pay _1200_ Las Vegas Coin, _12_ times over the course of a year totaling _24000_ Las Vegas Coin.
+In this transaction we prepare collateral for "_cool-project_". This proposal will pay _1200_ LasVegasCoin, _12_ times over the course of a year totaling _24000_ LasVegasCoin.
 
 **Warning -- if you change any fields within this command, the collateral transaction will become invalid.**
 

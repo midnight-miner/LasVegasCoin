@@ -22,7 +22,7 @@ Unpack the files into a directory, and then run pivx-qt.exe.
 
 ### OSX
 
-Drag Las Vegas Coin-Qt to your applications folder, and then run Las Vegas Coin-Qt.
+Drag LasVegasCoin-Qt to your applications folder, and then run LasVegasCoin-Qt.
 
 ### Need Help?
 
@@ -41,7 +41,7 @@ The following are developer notes on how to build Las Vegas Coin on your native 
 
 Development
 ---------------------
-The Pivx repo's [root README](https://github.com/Las Vegas Coin-Project/Las Vegas Coin/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Pivx repo's [root README](https://github.com/LasVegasCoin-Project/LasVegasCoin/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
