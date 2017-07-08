@@ -74,10 +74,10 @@ static const char UNUSED* lasvegascoin_strings[] = {
                                    "Execute command when the best block changes (%s in cmd is replaced by block "
                                    "hash)"),
     QT_TRANSLATE_NOOP("lasvegascoin-core", ""
-                                   "Fees (in PIV/Kb) smaller than this are considered zero fee for relaying "
+                                   "Fees (in VGS/Kb) smaller than this are considered zero fee for relaying "
                                    "(default: %s)"),
     QT_TRANSLATE_NOOP("lasvegascoin-core", ""
-                                   "Fees (in PIV/Kb) smaller than this are considered zero fee for transaction "
+                                   "Fees (in VGS/Kb) smaller than this are considered zero fee for transaction "
                                    "creation (default: %s)"),
     QT_TRANSLATE_NOOP("lasvegascoin-core", ""
                                    "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -167,10 +167,10 @@ static const char UNUSED* lasvegascoin_strings[] = {
                                    "Unable to locate enough Obfuscation denominated funds for this transaction."),
     QT_TRANSLATE_NOOP("lasvegascoin-core", ""
                                    "Unable to locate enough Obfuscation non-denominated funds for this "
-                                   "transaction that are not equal 10000 PIV."),
+                                   "transaction that are not equal 10000 VGS."),
     QT_TRANSLATE_NOOP("lasvegascoin-core", ""
                                    "Unable to locate enough funds for this transaction that are not equal 10000 "
-                                   "PIV."),
+                                   "VGS."),
     QT_TRANSLATE_NOOP("lasvegascoin-core", ""
                                    "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
                                    "%s)"),
@@ -267,7 +267,7 @@ static const char UNUSED* lasvegascoin_strings[] = {
     QT_TRANSLATE_NOOP("lasvegascoin-core", "Error: You already have pending entries in the Obfuscation pool"),
     QT_TRANSLATE_NOOP("lasvegascoin-core", "Failed to listen on any port. Use -listen=0 if you want this."),
     QT_TRANSLATE_NOOP("lasvegascoin-core", "Failed to read block"),
-    QT_TRANSLATE_NOOP("lasvegascoin-core", "Fee (in PIV/kB) to add to transactions you send (default: %s)"),
+    QT_TRANSLATE_NOOP("lasvegascoin-core", "Fee (in VGS/kB) to add to transactions you send (default: %s)"),
     QT_TRANSLATE_NOOP("lasvegascoin-core", "Finalizing transaction."),
     QT_TRANSLATE_NOOP("lasvegascoin-core", "Force safe mode (default: %u)"),
     QT_TRANSLATE_NOOP("lasvegascoin-core", "Found enough users, signing ( waiting %s )"),
@@ -300,7 +300,7 @@ static const char UNUSED* lasvegascoin_strings[] = {
     QT_TRANSLATE_NOOP("lasvegascoin-core", "Invalid script detected."),
     QT_TRANSLATE_NOOP("lasvegascoin-core", "KeePassHttp id for the established association"),
     QT_TRANSLATE_NOOP("lasvegascoin-core", "KeePassHttp key for AES encrypted communication with KeePass"),
-    QT_TRANSLATE_NOOP("lasvegascoin-core", "Keep N PIV anonymized (default: %u)"),
+    QT_TRANSLATE_NOOP("lasvegascoin-core", "Keep N VGS anonymized (default: %u)"),
     QT_TRANSLATE_NOOP("lasvegascoin-core", "Keep at most <n> unconnectable transactions in memory (default: %u)"),
     QT_TRANSLATE_NOOP("lasvegascoin-core", "Last Obfuscation was too recent."),
     QT_TRANSLATE_NOOP("lasvegascoin-core", "Last successful Obfuscation action was too recent."),
