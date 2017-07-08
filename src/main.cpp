@@ -1621,7 +1621,7 @@ int64_t GetBlockValue(int64_t nHeight, bool bIsProofOfStake)
 		//NO PREMINE, THIS IS TO SUPPORT THE SWAP
 		if (nHeight == 1)
 		{
-			return 220000 * COIN;
+			return 240000 * COIN;
 		}		
 	}
 
