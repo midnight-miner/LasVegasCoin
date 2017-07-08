@@ -1393,7 +1393,7 @@
           </size>
          </property>
          <property name="text">
-          <string>Obfuscation</string>
+          <string>Stealth send</string>
          </property>
          <property name="checked">
           <bool>false</bool>
