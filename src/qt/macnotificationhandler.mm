@@ -14,7 +14,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"io.lasvegascoin.Pivx-Qt";
+        return @"io.lasvegascoin.LasVegasCoin-Qt";
     } else {
         return [self __bundleIdentifier];
     }

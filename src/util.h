@@ -36,7 +36,7 @@ extern bool fLiteMode;
 extern bool fEnableSwiftTX;
 extern int nSwiftTXDepth;
 extern int nObfuscationRounds;
-extern int nAnonymizePivxAmount;
+extern int nAnonymizeLasVegasCoinAmount;
 extern int nLiquidityProvider;
 extern bool fEnableObfuscation;
 extern int64_t enforceMasternodePaymentsTime;

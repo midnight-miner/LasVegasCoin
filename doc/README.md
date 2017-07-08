@@ -41,7 +41,7 @@ The following are developer notes on how to build Las Vegas Coin on your native 
 
 Development
 ---------------------
-The Pivx repo's [root README](https://github.com/LasVegasCoin-Project/LasVegasCoin/blob/master/README.md) contains relevant information on the development process and automated testing.
+The LasVegasCoin repo's [root README](https://github.com/LasVegasCoin-Project/LasVegasCoin/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)

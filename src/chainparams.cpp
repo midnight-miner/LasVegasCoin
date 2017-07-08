@@ -1,7 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The Las Vegas Coin developers
+// Copyright (c) 2015-2017 The LasVegasCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -52,7 +52,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 //    timestamp before)
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
-    boost::assign::map_list_of(0, uint256("0x00004076b277072a7bab2d8ea15cdcff8cc5b6e834d24f0415d56b4d1964d8a5"));
+    boost::assign::map_list_of(0, uint256("1c9121bf9329a6234bfd1ea2d91515f19cd96990725265253f4b164283ade5dd"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1493667067, // * UNIX timestamp of last checkpoint block
@@ -89,64 +89,83 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0xa3;
-        pchMessageStart[1] = 0x21;
-        pchMessageStart[2] = 0x9a;
-        pchMessageStart[3] = 0xaa;
-        vAlertPubKey = ParseHex("042d16c016ed91528241bcf0222989769417eb10cdb679228q91e26e26900eb9fd053cd9f16a9a2894ad5ebbd551be1a4bd23bd55023679be17f0bd3a16e6fbeba");
-        nDefaultPort = 62884;
-        bnProofOfWorkLimit = ~uint256(0) >> 16;
-        nSubsidyHalvingInterval = 21000000;
+        pchMessageStart[0] = 0x97;
+        pchMessageStart[1] = 0xc7;
+        pchMessageStart[2] = 0xf7;
+        pchMessageStart[3] = 0xe7;
+        vAlertPubKey = ParseHex("0000098d3aa6ba6e7423fa5cbd6a89e0a9a5348f88d332b44a5cb1a8b7ed2c1eaa335fc8dc4f012cb8241cc0bdafd6ca70c5f5448916e4e6f511bcd746ed57dc50");
+        nDefaultPort = 60702;
+        bnProofOfWorkLimit = ~uint256(0) >> 20; // Las Vegas Coin starting difficulty is 1 / 2^12
+        nSubsidyHalvingInterval = 175200; //Halving each year for ~35 years
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 10 * 60; // Las Vegas Coin: 1 day
-        nTargetSpacing = 1 * 69;  // Las Vegas Coin: 1 minute
-        nLastPOWBlock = 259200;
-        nMaturity = 100;
+        nTargetTimespan = 1 * 15; // Las Vegas Coin: 0.25 day
+        nTargetSpacing = 5 * 60;  // Las Vegas Coin: 5 minutes
+        nLastPOWBlock = 0;
+        nMaturity = 250;
         nMasternodeCountDrift = 20;
-        nModifierUpdateBlock = 615800;
+        nModifierUpdateBlock = 1;
 
-        /**
-         * Build the genesis block. Note that the output of the genesis coinbase cannot
-         * be spent as it did not originally exist in the database.
-         *
-         * CBlock(hash=00000ffd590b14, ver=1, hashPrevBlock=00000000000000, hashMerkleRoot=e0028e, nTime=1390095618, nBits=1e0ffff0, nNonce=28917698, vtx=1)
-         *   CTransaction(hash=e0028e, ver=1, vin.size=1, vout.size=1, nLockTime=0)
-         *     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d01044c5957697265642030392f4a616e2f3230313420546865204772616e64204578706572696d656e7420476f6573204c6976653a204f76657273746f636b2e636f6d204973204e6f7720416363657074696e6720426974636f696e73)
-         *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
-         *   vMerkleTree: e0028e
-         */
-        const char* pszTimestamp = "July 20th 1969 (first man on the moon)";
+
+        const char* pszTimestamp = "08-07-2017 - Vegas Baby!";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
-        txNew.vin[0].scriptSig = CScript() << 0 << CScriptNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 0 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04c10e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9") << OP_CHECKSIG;
+        txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
+        txNew.vout[0].nValue = 250 * COIN;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04c10e83b2703ccf321f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1494013644;
-        genesis.nBits = 0x1f00ffff;
-						  
-        genesis.nNonce = 123482;
+        genesis.nTime = 1499517587;
+        genesis.nBits = 0x1e0ffff0;
+        genesis.nNonce = 0;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00004076b277072a7bab2d8ea15cdcff8cc5b6e834d24f0415d56b4d1964d8a5"));
-        assert(genesis.hashMerkleRoot == uint256("0x762df9fe2ef7e7b7838723ef08e1817014248f4fd09526c869bdf9939fea6fa8"));
+		
+printf("Searching for genesis block...\n");
+uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+uint256 thash;
 
-        vSeeds.push_back(CDNSSeedData("First", "host.blockexplorer.pro"));     // Primary DNS Seeder from Fuzzbawls
+while (true)
+{
+    thash = genesis.GetHash();
+    if (thash <= hashTarget)
+        break;
+    if ((genesis.nNonce & 0xFFF) == 0)
+    {
+        printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
+    }
+    ++genesis.nNonce;
+    if (genesis.nNonce == 0)
+    {
+        printf("NONCE WRAPPED, incrementing time\n");
+        ++genesis.nTime;
+    }
+}
+printf("genesis.nTime = %u \n", genesis.nTime);
+printf("genesis.nNonce = %u \n", genesis.nNonce);
+printf("genesis.nVersion = %u \n", genesis.nVersion);
+printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str()); 
+printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str()); 
+
+                       
+					   
+        assert(hashGenesisBlock == uint256("0x"));
+        assert(genesis.hashMerkleRoot == uint256("0x"));
+
+        vSeeds.push_back(CDNSSeedData("host.blockexplorer.pro", "host.blockexplorer.pro"));     // Primary DNS Seeder from Fuzzbawls
 
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 75);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 85);
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 153);
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 48);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 212);
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x31)(0x2B).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x77).convert_to_container<std::vector<unsigned char> >();
 
@@ -165,8 +184,8 @@ public:
         nPoolMaxTransactions = 3;
         strSporkKey = "0484698d3ba6ba6e7423fa5cbd6a89e0a9a5348f88d332b44a5cb1a8b7ed2c1eaa335fc8dc4f012cb8241cc0bdafd6ca70c5f5448916e4e6f511bcd746ed57dc50";
         //strSporkKey = "04B433E6598390C992F4F022F20D3B4CBBE691652EE7C48243B81701CBDB7CC7D7BF0EE09E154E6FCBF2043D65AF4E9E97B89B5DBAF830D83B9B7F469A6C45A717";
-        strObfuscationPoolDummyAddress = "XQZ56tcwzdFUN2zCBuZzd7j4BCTZg6Fu4Q";
-        nStartMasternodePayments = 1494013644; //Wed, 25 Jun 2014 20:36:16 GMT
+        strObfuscationPoolDummyAddress = "D87q2gC9j6nNrnzCsg4aY6bHMLsT9nUhEw";
+        nStartMasternodePayments = 1403728576; //Wed, 25 Jun 2014 20:36:16 GMT
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
@@ -196,8 +215,8 @@ public:
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Las Vegas Coin: 1 day
-        nTargetSpacing = 1 * 60;  // Las Vegas Coin: 1 minute
+        nTargetTimespan = 1 * 60; // LasVegasCoin: 1 day
+        nTargetSpacing = 1 * 60;  // LasVegasCoin: 1 minute
         nLastPOWBlock = 200;
         nMaturity = 15;
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
@@ -268,8 +287,8 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // Pivx: 1 day
-        nTargetSpacing = 1 * 60;        // Pivx: 1 minutes
+        nTargetTimespan = 24 * 60 * 60; // LasVegasCoin: 1 day
+        nTargetSpacing = 1 * 60;        // LasVegasCoin: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1454124731;
         genesis.nBits = 0x207fffff;

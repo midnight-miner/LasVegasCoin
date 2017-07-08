@@ -299,7 +299,7 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* Pivx features */
+        /* LasVegasCoin features */
         {"lasvegascoin", "masternode", &masternode, true, true, false},
         {"lasvegascoin", "masternodelist", &masternodelist, true, true, false},
         {"lasvegascoin", "mnbudget", &mnbudget, true, true, false},
@@ -1029,7 +1029,7 @@ std::string HelpExampleRpc(string methodname, string args)
 {
     return "> curl --user myusername --data-binary '{\"jsonrpc\": \"1.0\", \"id\":\"curltest\", "
            "\"method\": \"" +
-           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:51473/\n";
+           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:50702/\n";
 }
 
 const CRPCTable tableRPC;

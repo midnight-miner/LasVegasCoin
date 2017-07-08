@@ -1,9 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Pivx
-Comment=Pivx P2P Cryptocurrency
-Comment[fr]=Pivx, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Pivx, eşten eşe kriptografik sanal para birimi
+Name=LasVegasCoin
+Comment=LasVegasCoin P2P Cryptocurrency
+Comment[fr]=LasVegasCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=LasVegasCoin, eşten eşe kriptografik sanal para birimi
 Exec=lasvegascoin-qt %u
 Terminal=false
 Type=Application

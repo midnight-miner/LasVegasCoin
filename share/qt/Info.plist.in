@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2015-@COPYRIGHT_YEAR@ The Pivx Core developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2015-@COPYRIGHT_YEAR@ The LasVegasCoin Core developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -32,7 +32,7 @@
   <string>LasVegasCoin-Qt</string>
 
   <key>CFBundleIdentifier</key>
-  <string>io.lasvegascoin.Pivx-Qt</string>
+  <string>io.lasvegascoin.LasVegasCoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -40,7 +40,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.lasvegascoin.PivxPayment</string>
+      <string>io.lasvegascoin.LasVegasCoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>lasvegascoin</string>
@@ -54,7 +54,7 @@
       <key>UTTypeIdentifier</key>
       <string>io.lasvegascoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Pivx payment request</string>
+      <string>LasVegasCoin payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
