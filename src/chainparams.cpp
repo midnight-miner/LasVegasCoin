@@ -128,7 +128,7 @@ public:
         hashGenesisBlock = genesis.GetHash();
 		
 printf("Searching for genesis block...\n");
-uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+uint256 hashTarget = uint256().SetCompact(genesis.nBits);
 uint256 thash;
 
 while (true)
