@@ -96,7 +96,7 @@ public:
         vAlertPubKey = ParseHex("0000098d3aa6ba6e7423fa5cbd6a89e0a9a5348f88d332b44a5cb1a8b7ed2c1eaa335fc8dc4f012cb8241cc0bdafd6ca70c5f5448916e4e6f511bcd746ed57dc50");
         nDefaultPort = 60702;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Las Vegas Coin starting difficulty is 1 / 2^12
-        nSubsidyHalvingInterval = 175200; //Halving each year for ~35 years
+        nSubsidyHalvingInterval = 24 * 365 * 12; //Halving each year for ~35 years
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
@@ -104,7 +104,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 15; // Las Vegas Coin: 0.25 day
         nTargetSpacing = 5 * 60;  // Las Vegas Coin: 5 minutes
-        nLastPOWBlock = 175200 * 35; //35 years of PoW
+        nLastPOWBlock = 24 * 365 * 12 * 35; //35 years of PoW
         nMaturity = 250;
         nMasternodeCountDrift = 20;
         nModifierUpdateBlock = 1;

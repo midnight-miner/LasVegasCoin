@@ -1607,17 +1607,24 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int64_t nHeight, bool bIsProofOfStake)
 {
+	int64_t nSubsidy = 0;
+	
+	
 	if (bIsProofOfStake)
-		return 2 / 365 / 7 * COIN;
-	
-	int64_t nSubsidy = 0.05 * COIN;
-
-	//NO PREMINE, THIS IS TO SUPPORT THE SWAP
-	if (nHeight == 1)
 	{
-		return 220000 * COIN;
+		nSubsidy = 0.5 * COIN;
+	} 
+	else 
+	{
+		nSubsidy = 0.05 * COIN;
+		
+		//NO PREMINE, THIS IS TO SUPPORT THE SWAP
+		if (nHeight == 1)
+		{
+			return 220000 * COIN;
+		}		
 	}
-	
+
 	nSubsidy >>= (nHeight / Params().SubsidyHalvingInterval());
 	
     return nSubsidy;
