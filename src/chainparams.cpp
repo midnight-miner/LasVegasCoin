@@ -104,7 +104,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 15; // Las Vegas Coin: 0.25 day
         nTargetSpacing = 5 * 60;  // Las Vegas Coin: 5 minutes
-        nLastPOWBlock = 0;
+        nLastPOWBlock = 175200 * 35; //35 years of PoW
         nMaturity = 250;
         nMasternodeCountDrift = 20;
         nModifierUpdateBlock = 1;
@@ -115,7 +115,7 @@ public:
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 250 * COIN;
+        txNew.vout[0].nValue = 1 * COIN;
         txNew.vout[0].scriptPubKey = CScript() << ParseHex("04c10e83b2703ccf321f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
