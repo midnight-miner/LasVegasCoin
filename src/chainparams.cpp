@@ -102,7 +102,7 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 15; // Las Vegas Coin: 0.25 day
+        nTargetTimespan = 5 * 60; // Las Vegas Coin: 0.25 day
         nTargetSpacing = 5 * 60;  // Las Vegas Coin: 5 minutes
         nLastPOWBlock = 24 * 365 * 12 * 35; //35 years of PoW
         nMaturity = 250;
