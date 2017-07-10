@@ -40,7 +40,7 @@ Visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=19
 
 <table>
 <th>Block Height</th><th>Masternodes</th><th>Miner</th>
-<tr><td>1-Infinite</td><td>50% (0.25 VGS)</td><td>50% (0.25 VGS)</td></tr>
+<tr><td>1-Infinite</td><td>50% (0.025 VGS)</td><td>50% (0.025 VGS)</td></tr>
 </table>
 
 ### PoS Rewards Breakdown
