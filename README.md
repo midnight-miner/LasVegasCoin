@@ -1,4 +1,4 @@
-(http://i.imgur.com/dTf655N.png)
+<img src="http://i.imgur.com/dTf655N.png" alt="Las Vegas Coin Core" title="Las Vegas Coin Core" />
 
 Las Vegas Coin Core integration/staging repository
 =====================================
