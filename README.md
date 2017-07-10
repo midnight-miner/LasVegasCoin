@@ -28,9 +28,9 @@ Visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=19
 <th colspan=4>PoW Phase</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th><th>Duration (Days)</th></tr>
 <tr><td>1</td><td>220000 VGS</td><td>Initial Premine</td><td>0 Days</td></tr>
-<tr><td>2-105120</td><td>0.05 VGS</td><td rowspan=2>Open Mining</td><td rowspan=2> 1 year</td></tr>
+<tr><td>2-105120</td><td>0.05 VGS</td><td rowspan=2>Open Mining</td><td rowspan=2> ~35 years</td></tr>
 <tr><td>105121-210240</td><td>0.025 VGS</td></tr>
-<tr><td colspan=2>Block reward halvening once per year (or 105120 blocks)</td></tr>
+<tr><td colspan=4>Block reward halvening once per year (or 105120 blocks)</td></tr>
 <tr><th colspan=4>PoS 3.0 Phase</th></tr>
 <tr><th>Block Height</th><th colspan=3>Reward Amount</th></tr>
 <tr><td>1-Infinite</td><td colspan=3>0.5 VGS fixed PoS rate</td></tr>
