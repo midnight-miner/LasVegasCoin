@@ -1619,9 +1619,9 @@ int64_t GetBlockValue(int64_t nHeight, bool bIsProofOfStake)
 		nSubsidy = 0.05 * COIN;
 		
 		//NO PREMINE, THIS IS TO SUPPORT THE SWAP
-		if (nHeight == 1)
+		if (nHeight == 0)
 		{
-			return 240000 * COIN;
+			return 220000 * COIN;
 		}		
 	}
 
@@ -1632,7 +1632,7 @@ int64_t GetBlockValue(int64_t nHeight, bool bIsProofOfStake)
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount)
 {
-	if (nHeight == 1) return 0;
+	if (nHeight == 0) return 0;
 	
     int64_t ret = 0;
 	ret = blockValue / 2;
