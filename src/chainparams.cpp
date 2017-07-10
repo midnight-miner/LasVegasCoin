@@ -52,7 +52,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 //    timestamp before)
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
-    boost::assign::map_list_of(0, uint256("0xd7316ea25754aea524b33bab36d02bafd15dedcb3aac59495b0a0ca0aaa33908"));
+    boost::assign::map_list_of(0, uint256("0x00000a036a61234bbdaff55e2be41cd1302061ac5f3dbf971dc2055b506f5dbc"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1499517587, // * UNIX timestamp of last checkpoint block
@@ -110,14 +110,13 @@ public:
         nModifierUpdateBlock = 1;
 
 		//genesis.nTime = 1499517587
-		//genesis.nNonce = 1827338
+		//genesis.nNonce = 2663530
 		//genesis.nVersion = 1
-		//genesis.GetHash = 00000943d6a03366b3f8c0b3afbc7656e537ae10c894b42f258dd1eea684f7f3
-		//genesis.hashMerkleRoot = d7316ea25754aea524b33bab36d02bafd15dedcb3aac59495b0a0ca0aaa33908
-
-
-
-        const char* pszTimestamp = "08-07-2017 - Vegas Baby! - Welcome to fabulous las vegas.";
+		//genesis.GetHash = 00000a036a61234bbdaff55e2be41cd1302061ac5f3dbf971dc2055b506f5dbc
+		//genesis.hashMerkleRoot = 675c5ac5514ddaf78007a9396a2b31549261f49e691f1eed009da05859a60394
+		
+		
+        const char* pszTimestamp = "08-07-2017 - Vegas Baby! - Welcome to fabulous las vegas :)";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1); 
@@ -130,14 +129,14 @@ public:
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
         genesis.nTime = 1499517587;
-        genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 1827338;
+        genesis.nBits = 0x1e0fffff;
+        genesis.nNonce = 2663530;
 
         hashGenesisBlock = genesis.GetHash();
 
-					   
-        assert(hashGenesisBlock == uint256("0x00000943d6a03366b3f8c0b3afbc7656e537ae10c894b42f258dd1eea684f7f3"));
-        assert(genesis.hashMerkleRoot == uint256("0xd7316ea25754aea524b33bab36d02bafd15dedcb3aac59495b0a0ca0aaa33908"));
+
+        assert(hashGenesisBlock == uint256("0x00000a036a61234bbdaff55e2be41cd1302061ac5f3dbf971dc2055b506f5dbc"));
+        assert(genesis.hashMerkleRoot == uint256("0x675c5ac5514ddaf78007a9396a2b31549261f49e691f1eed009da05859a60394"));
 
         vSeeds.push_back(CDNSSeedData("host.blockexplorer.pro", "host.blockexplorer.pro"));     // Primary DNS Seeder from Fuzzbawls
 
