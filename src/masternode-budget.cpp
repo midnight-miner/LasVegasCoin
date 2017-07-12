@@ -916,11 +916,6 @@ void CBudgetManager::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
 
         if (Params().NetworkID() == CBaseChainParams::MAIN) {
             if (nProp == 0) {
-                if (pfrom->HasFulfilledRequest("mnvs")) {
-                    LogPrintf("mnvs - peer already asked me for the list\n");
-                    Misbehaving(pfrom->GetId(), 20);
-                    return;
-                }
                 pfrom->FulfilledRequest("mnvs");
             }
         }
