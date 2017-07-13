@@ -17,7 +17,6 @@ Visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=19
 <tr><td>Algo</td><td>Quark</td></tr>
 <tr><td>Block Time</td><td>5 minutes</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
-<tr><td>Max Coin Supply (PoW Phase)</td><td>20000 VGS</td></tr>
 <tr><td>Max Coin Supply (PoS Phase)</td><td>Infinite</td></tr>
 <tr><td>Premine</td><td>220000 VGS</td></tr>
 </table>
@@ -28,8 +27,9 @@ Visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=19
 <th colspan=4>PoW Phase</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th><th>Duration (Days)</th></tr>
 <tr><td>1</td><td>220000 VGS</td><td>Initial Premine</td><td>0 Days</td></tr>
-<tr><td>2-105120</td><td>0.05 VGS</td><td rowspan=2>Open Mining</td><td rowspan=2> ~35 years (halving each year)</td></tr>
-<tr><td>105121-210240</td><td>0.025 VGS</td></tr>
+<tr><td>2-750</td><td>0.05 VGS</td><td rowspan=2>Open Mining</td><td rowspan=2> (halving each year)</td></tr>
+<tr><td>750-105120</td><td>0.5 VGS</td><td rowspan=2>Open Mining</td><td rowspan=2> (halving each year)</td></tr>
+<tr><td>105121-210240</td><td>0.25 VGS</td></tr>
 <tr><td colspan=4><i>Block reward halving each year (or 105120 blocks)</i></td></tr>
 <tr><th colspan=4>PoS 3.0 Phase</th></tr>
 <tr><th>Block Height</th><th colspan=3>Reward Amount</th></tr>
