@@ -223,7 +223,7 @@ bool IsBlockPayeeValid(const CBlock& block, int nBlockHeight)
         return true;
     }
 
-    const CTransaction& txNew = (nBlockHeight > Params().LAST_POW_BLOCK() ? block.vtx[1] : block.vtx[0]);
+    const CTransaction& txNew = (block.IsProofOfStake() ? block.vtx[1] : block.vtx[0]);
 
     //check if it's a budget block
     if (IsSporkActive(SPORK_13_ENABLE_SUPERBLOCKS)) {
@@ -297,7 +297,7 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int64_t nFe
     CAmount blockValue = GetBlockValue(pindexPrev->nHeight, pindexPrev->IsProofOfStake());
     CAmount masternodePayment = GetMasternodePayment(pindexPrev->nHeight, blockValue);
     
-    if (!fProofOfStake && pindexPrev->nHeight + 1 < Params().LAST_POW_BLOCK()) 	
+    if (!fProofOfStake) 	
     {	
 	    txNew.vout[0].nValue = blockValue;	
     }
