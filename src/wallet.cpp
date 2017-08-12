@@ -1591,7 +1591,7 @@ bool CWallet::MintableCoins()
     if (mapArgs.count("-reservebalance") && !ParseMoney(mapArgs["-reservebalance"], nReserveBalance))
         return error("MintableCoins() : invalid reserve balance amount");
     if (nBalance <= nReserveBalance)
-        return false;
+        return true;
 
     vector<COutput> vCoins;
     AvailableCoins(vCoins, true);
