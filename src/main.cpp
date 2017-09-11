@@ -1620,6 +1620,8 @@ int64_t GetBlockValue(int64_t nHeight, bool bIsProofOfStake)
 		
 		if (nHeight > 750)
 			nSubsidy = 1;
+		if (nHeight > 20000)
+			nSubsidy = 5;
 		
 		//NO PREMINE, THIS IS TO SUPPORT THE SWAP
 		if (nHeight == 0)
