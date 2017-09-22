@@ -273,7 +273,7 @@ void SendCoinsDialog::on_sendButton_clicked()
         strFunds = tr("using") + " <b>" + tr("anonymous funds") + "</b>";
         QString strNearestAmount(
             BitcoinUnits::formatWithUnit(
-                model->getOptionsModel()->getDisplayUnit(), 0.1 * COIN));
+                model->getOptionsModel()->getDisplayUnit(), 10 * CENT)); // 0.1 * COIN
         strFee = QString(tr(
             "(obfuscation requires this amount to be rounded up to the nearest %1).")
                              .arg(strNearestAmount));

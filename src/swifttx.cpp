@@ -201,7 +201,8 @@ bool IsIXTXValid(const CTransaction& txCollateral)
         return true;
     }
 
-    if (nValueIn - nValueOut < COIN * 0.01) {
+//    if (nValueIn - nValueOut < COIN * 0.01) {
+    if (nValueIn - nValueOut < 1 * CENT) {
         LogPrint("swifttx", "IsIXTXValid - did not include enough fees in transaction %d\n%s\n", nValueOut - nValueIn, txCollateral.ToString().c_str());
         return false;
     }
