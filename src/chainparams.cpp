@@ -138,7 +138,7 @@ public:
         assert(hashGenesisBlock == uint256("0x00000a036a61234bbdaff55e2be41cd1302061ac5f3dbf971dc2055b506f5dbc"));
         assert(genesis.hashMerkleRoot == uint256("0x675c5ac5514ddaf78007a9396a2b31549261f49e691f1eed009da05859a60394"));
 
-        vSeeds.push_back(CDNSSeedData("host.blockexplorer.pro", "host.blockexplorer.pro"));     // Primary DNS Seeder from Fuzzbawls
+        vSeeds.push_back(CDNSSeedData("vgs-dns.midnightminer.net", "vgs-dns.midnightminer.net"));     // Primary DNS Seeder from Midnight Miner
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 70);
