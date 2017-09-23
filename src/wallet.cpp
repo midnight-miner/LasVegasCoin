@@ -1743,7 +1743,7 @@ bool CWallet::SelectCoins(const CAmount& nTargetValue, set<pair<const CWalletTx*
         BOOST_FOREACH (int64_t v, obfuScationDenominations) {
             BOOST_FOREACH (const COutput& out, vCoins) {
                 if (out.tx->vout[out.i].nValue == v                                               //make sure it's the denom we're looking for
-                    && nValueRet + out.tx->vout[out.i].nValue < nTargetValue + (0.1 * COIN) + 100 //round the amount up to .1 VGS over
+                    && nValueRet + out.tx->vout[out.i].nValue < nTargetValue + ( 10 * CENT) + 100 //round the amount up to .1 VGS over
                     ) {
                     CTxIn vin = CTxIn(out.tx->GetHash(), out.i);
                     int rounds = GetInputObfuscationRounds(vin);
@@ -1838,7 +1838,7 @@ bool CWallet::SelectCoinsByDenominations(int nDenom, int64_t nValueMin, int64_t 
                     fAccepted = true;
                 } else if ((nDenom & (1 << 4)) && out.tx->vout[out.i].nValue == ((1 * COIN) + 1000)) {
                     fAccepted = true;
-                } else if ((nDenom & (1 << 5)) && out.tx->vout[out.i].nValue == ((.1 * COIN) + 100)) {
+                } else if ((nDenom & (1 << 5)) && out.tx->vout[out.i].nValue == ((10 * CENT) + 100)) {
                     fAccepted = true;
                 }
             } else {
@@ -1858,7 +1858,7 @@ bool CWallet::SelectCoinsByDenominations(int nDenom, int64_t nValueMin, int64_t 
                 } else if ((nDenom & (1 << 4)) && out.tx->vout[out.i].nValue == ((1 * COIN) + 1000)) {
                     fAccepted = true;
                     fFound1 = true;
-                } else if ((nDenom & (1 << 5)) && out.tx->vout[out.i].nValue == ((.1 * COIN) + 100)) {
+                } else if ((nDenom & (1 << 5)) && out.tx->vout[out.i].nValue == ((10 * CENT) + 100)) {
                     fAccepted = true;
                     fFoundDot1 = true;
                 }
@@ -2607,7 +2607,7 @@ string CWallet::PrepareObfuscationDenominate(int minRounds, int maxRounds)
         if minRounds >= 0 it means only denominated inputs are going in and coming out
     */
     if (minRounds >= 0) {
-        if (!SelectCoinsByDenominations(obfuScationPool.sessionDenom, 0.1 * COIN, OBFUSCATION_POOL_MAX, vCoins, vCoins2, nValueIn, minRounds, maxRounds))
+        if (!SelectCoinsByDenominations(obfuScationPool.sessionDenom, 10 * CENT, OBFUSCATION_POOL_MAX, vCoins, vCoins2, nValueIn, minRounds, maxRounds))
             return _("Error: Can't select current denominated inputs");
     }
 
@@ -2646,7 +2646,7 @@ string CWallet::PrepareObfuscationDenominate(int minRounds, int maxRounds)
                 fAccepted = true;
             } else if ((obfuScationPool.sessionDenom & (1 << 4)) && v == ((1 * COIN) + 1000)) {
                 fAccepted = true;
-            } else if ((obfuScationPool.sessionDenom & (1 << 5)) && v == ((.1 * COIN) + 100)) {
+            } else if ((obfuScationPool.sessionDenom & (1 << 5)) && v == ((10 * CENT) + 100)) {
                 fAccepted = true;
             }
             if (!fAccepted) continue;

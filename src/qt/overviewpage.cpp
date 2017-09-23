@@ -493,7 +493,7 @@ void OverviewPage::toggleObfuscation()
     }
     if (!fEnableObfuscation) {
         int64_t balance = currentBalance;
-        float minAmount = 14.90 * COIN;
+        float minAmount = 1490 * CENT;  // 14.90 VGS
         if (balance < minAmount) {
             QString strMinAmount(BitcoinUnits::formatWithUnit(nDisplayUnit, minAmount));
             QMessageBox::warning(this, tr("Obfuscation"),

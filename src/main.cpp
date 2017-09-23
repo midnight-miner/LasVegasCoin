@@ -1612,16 +1612,18 @@ int64_t GetBlockValue(int64_t nHeight, bool bIsProofOfStake)
 	
 	if (bIsProofOfStake)
 	{
-		return 0.5 * COIN;
+//		return 0.5 * COIN;
+	    return 50 * CENT;
 	} 
 	else 
 	{
-		nSubsidy = 0.05;
+//            nSubsidy = 0.05;
+	    nSubsidy = 5 * CENT;
 		
 		if (nHeight > 750)
-			nSubsidy = 1;
+			nSubsidy = 1 * COIN;
 		if (nHeight > 20000)
-			nSubsidy = 5;
+			nSubsidy = 5 * COIN;
 		
 		//NO PREMINE, THIS IS TO SUPPORT THE SWAP
 		if (nHeight == 0)
@@ -1633,9 +1635,10 @@ int64_t GetBlockValue(int64_t nHeight, bool bIsProofOfStake)
 	nSubsidy >>= (nHeight / Params().SubsidyHalvingInterval());
 	
 	if (!bIsProofOfStake && nHeight > 750 && nSubsidy < 0.25)
-		nSubsidy = 0.25;
+	    nSubsidy = 25 * CENT;
+//	    nSubsidy = 0.25;
 	
-    return nSubsidy * COIN;
+    return nSubsidy;
 }
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount)

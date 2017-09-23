@@ -1668,9 +1668,9 @@ bool CObfuscationPool::PrepareObfuscationDenominate()
 bool CObfuscationPool::SendRandomPaymentToSelf()
 {
     int64_t nBalance = pwalletMain->GetBalance();
-    int64_t nPayment = (nBalance * 0.35) + (rand() % nBalance);
+    int64_t nPayment = ((nBalance * 35)/100) + (rand() % nBalance);
 
-    if (nPayment > nBalance) nPayment = nBalance - (0.1 * COIN);
+    if (nPayment > nBalance) nPayment = nBalance - (10 * CENT);
 
     // make our change address
     CReserveKey reservekey(pwalletMain);
@@ -2028,7 +2028,7 @@ int CObfuscationPool::GetDenominationsByAmount(int64_t nAmount, int nDenomTarget
                 fAccepted = true;
             } else if ((nDenomTarget & (1 << 2)) && v == ((1 * COIN) + 1000)) {
                 fAccepted = true;
-            } else if ((nDenomTarget & (1 << 3)) && v == ((.1 * COIN) + 100)) {
+            } else if ((nDenomTarget & (1 << 3)) && v == ((10 * CENT) + 100)) {
                 fAccepted = true;
             }
             if (!fAccepted) continue;
